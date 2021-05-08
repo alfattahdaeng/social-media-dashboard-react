@@ -45,7 +45,10 @@ const UserCard = props => {
         <div className={classes.m}>
           {props.users.map(user => (
           <Card className={classes.cardStyle} key={user.id}>
-            <Link style={{textDecoration:'none'}} to={`/user/${user.id}`}>
+            <Link style={{textDecoration:'none'}} to={{
+                pathname: `/user/${user.id}`,
+                state: { id: user.id }
+              }}>
               <CardContent>
                   <Typography variant="h5" className={classes.mb}>
                     {user.name}

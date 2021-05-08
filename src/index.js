@@ -10,14 +10,18 @@ import "./index.css";
 import App from './App';
 import rootReducer from './reducers';
 import theme from "./theme";
+import ScrollToTop from './utils/ScollToTop';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
+const renderMethod = !!module.hot ? ReactDOM.render : ReactDOM.hydrate
 
-ReactDOM.hydrate(
+renderMethod(
   <ThemeProvider theme={theme}>
     <Provider store={store}>
      <BrowserRouter>
+     <ScrollToTop>
         <App />
+      </ScrollToTop>
      </BrowserRouter>
    </Provider>
   </ThemeProvider>,
