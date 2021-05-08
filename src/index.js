@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ThemeProvider } from '@material-ui/core/styles'
+import { BrowserRouter } from 'react-router-dom';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import { Provider } from 'react-redux';
+
 import "./index.css";
 import App from './App';
-import theme from './theme';
+import rootReducer from './reducers';
+
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 ReactDOM.hydrate(
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>,
+    <Provider store={store}>
+     <BrowserRouter>
+        <App />
+     </BrowserRouter>
+   </Provider>,
   document.getElementById('root')
 );
 

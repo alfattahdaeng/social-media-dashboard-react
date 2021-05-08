@@ -8,6 +8,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import { connect } from 'react-redux';
 
 const useStyles = makeStyles({
   table: {
@@ -18,12 +19,14 @@ const useStyles = makeStyles({
   }
 });
 
-const UserTableList = (props) => {
+const UserTableList = props => {
     const classes = useStyles();
 
     return (
         <TableContainer component={Paper}>
-                <Table className={classes.table} aria-label="simple table">
+          {props.users.length ? (
+
+          <Table className={classes.table} aria-label="simple table">
                 <TableHead className={classes.bgColor}>
                     <TableRow>
                         <TableCell>Username</TableCell>
@@ -40,9 +43,18 @@ const UserTableList = (props) => {
                     </TableRow>
                     ))}
                 </TableBody>
-                </Table>
+          </Table>
+           ) : (
+            <div/>
+          )}
         </TableContainer>
     );
 };
 
-export default UserTableList;
+const mapStateToProps = state => {
+  return {
+    users: state.users
+  };
+};
+
+export default connect(mapStateToProps)(UserTableList);

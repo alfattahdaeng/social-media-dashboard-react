@@ -1,13 +1,16 @@
 import React from 'react';
 import Header from './components/Header';
-import Page from './components/Page';
+import { Route, Switch } from 'react-router-dom';
+import Dashboard from './pages/Dashboard';
 
 
 const App = () => {
   return (
     <div className="App">
       <Header />
-      <Page />
+      <Switch>
+        <Route exact path="/" component={Dashboard} />
+      </Switch>
     </div>
   );
 }
