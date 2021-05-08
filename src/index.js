@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router} from 'react-router-dom';
-
+import { ThemeProvider } from '@material-ui/core/styles'
+import "./index.css";
 import App from './App';
+import theme from './theme';
 
-ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
+ReactDOM.hydrate(
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>,
   document.getElementById('root')
 );
 
