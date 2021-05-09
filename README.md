@@ -2,14 +2,16 @@
 
 See Project's Demo on: [Live Demo](https://github.com/).
 
-<br />
-
 ## Installation
 
-**A.Installing Prerequisites**
+**A. Installing Prerequisites**
+
+<br />
+
 Download and install at least LTS or the latest version of [Node.js](https://nodejs.org/) from its web site. 
 
-**B.Clone to your Computer**
+**B. Clone repo to your local**
+
 <br />
 
 Open your favorite console application (Terminal, Command Prompt etc.), navigate into your work folder, run the following command and wait for it to finish:
@@ -25,7 +27,7 @@ Open your favorite console application (Terminal, Command Prompt etc.), navigate
 
 [Run with SSR : Port 8000]:
 ```sh
-    yarn run dev
+ yarn run dev
 ```
 
 ## About Project
