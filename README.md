@@ -6,13 +6,9 @@ See Project's Demo on: [Live Demo](https://github.com/).
 
 **A. Installing Prerequisites**
 
-<br />
-
 Download and install at least LTS or the latest version of [Node.js](https://nodejs.org/) from its web site. 
 
 **B. Clone repo to your local**
-
-<br />
 
 Open your favorite console application (Terminal, Command Prompt etc.), navigate into your work folder, run the following command and wait for it to finish:
 
