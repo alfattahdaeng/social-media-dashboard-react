@@ -1,6 +1,6 @@
 # Social Media Dashboard with react.js
 
-See Project's Demo on: [Live Demo](https://github.com/).
+See Project's Demo on: [Live Demo](https://distracted-wescoff-d2a16b.netlify.app/).
 
 ## Installation
 

@@ -76,18 +76,17 @@ class PostPage extends React.Component {
                 <Typography variant="h4" gutterBottom>
                 {this.props.post.title}
                 </Typography>
-                <Typography variant="subtitle2" gutterBottom>
-                    Posted by:
-                    <Link
+                <Link
                         className={classes.link}
                         to={{
                         pathname: `/user/${this.props.user.id}`,
                         props: { id: this.props.user.id }
                         }}
                     >
-                    {this.props.user.name}
-                    </Link>
-                </Typography>
+                  <Typography variant="subtitle2" gutterBottom>
+                    Posted by: {this.props.user.name}
+                  </Typography>
+                </Link>
                 <Typography variant="h6" className={classes.mb}>
                     {this.props.post.body}
                 </Typography>

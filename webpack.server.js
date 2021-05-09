@@ -17,7 +17,9 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: 'babel-loader'
+        use: {
+          loader: 'react-hot', 'babel-loader?presets[]=react,presets[]=es2015',
+        }
       }
     ]
   }

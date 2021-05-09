@@ -9,19 +9,19 @@ const UserDetail = props => {
             Profile
         </Typography>
         <Typography component="p">
-            {`Name: ${props.user.name}`}
+            Name: {props.user.name}
         </Typography>
         <Typography component="p">
-            {`Username: @${props.user.username}`}
+            Username: {props.user.username}
         </Typography>
         <Typography component="p">
-            {`Email: ${props.user.email}`}
+            Email: {props.user.email}
         </Typography>
         <Typography component="p">
-            {`Phone: ${props.user.phone}`}
+            Phone: {props.user.phone}
         </Typography>
         <Typography component="p">
-            {`Website: ${props.user.website}`}
+            Website: {props.user.website}
         </Typography>
     </div>
   );

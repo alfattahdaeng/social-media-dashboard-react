@@ -66,7 +66,6 @@ class Post extends React.Component {
 
     return (
       <div>
-        <Typography variant="h5" gutterBottom>
         <Link
          style={{textDecoration:'none'}}
          to={{
@@ -74,9 +73,8 @@ class Post extends React.Component {
             state: { id: this.props.post.id, userId: this.props.post.userId }
           }}
         >
-          {this.props.post.title}
+          <Typography variant="h5" gutterBottom>{this.props.post.title}</Typography>
         </Link>
-        </Typography>
         <Typography component="p">
             {this.props.post.body}
         </Typography>
