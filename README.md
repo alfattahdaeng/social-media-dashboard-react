@@ -1,46 +1,54 @@
-# Getting Started with Create React App
+# Social Media Dashboard with react.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+See Project's Demo on: [Live Demo](https://github.com/).
 
-## Available Scripts
+<br />
 
-[SSR Update] In the project directory, you can run:
+## Installation
 
-[Run CSR]:
+**A.Installing Prerequisites**
+Download and install at least LTS or the latest version of [Node.js](https://nodejs.org/) from its web site. 
 
-### `yarn start`
+**B.Clone to your Computer**
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open your favorite console application (Terminal, Command Prompt etc.), navigate into your work folder, run the following command and wait for it to finish:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br />
 
-[Run with SSR]:
+```sh
+ git clone https://github.com/alfattahdaeng/social-media-dashboard-react
+ cd social-media-dashboard-react
+ yarn install
+ yarn start
+```
 
-### `yarn run dev`
+[Run with SSR : Port 8000]:
+```sh
+    yarn run dev
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
+## About Project
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A social media dashboard using single page application with API
+https://jsonplaceholder.typicode.com/
 
-### `yarn test`
+**Features:**
+- User can view list of users
+- User can view list of posts of each user
+- User can view list of albums of each user
+- User can view the detail of each post and its comment
+- User can view list of photos from an album
+- User can view the detail of photo
+- User can add, edit and delete post
+- User can add, edit and delete comment
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Sources and Credits
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- create-react-app
+- material-ui
+- react-router-dom
+- axios
+- react-redux
+- jess (on progress)
+- enzyme (on progress)
