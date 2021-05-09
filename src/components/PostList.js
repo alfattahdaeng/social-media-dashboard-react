@@ -11,7 +11,21 @@ const useStyles = makeStyles (theme => ({
       borderBottom: '1px solid #333',
       '& a': {
         color: '#04a4a4',
-      }
+      },
+      '& button': {
+        margin: '20px 0 0 20px',
+        padding: '0px',
+        color: '#333',
+        minWidth: '3px',
+        backgroundColor: 'transparent',
+        '&:hover':{
+          color: '#04a4a4',
+          backgroundColor: 'transparent',
+        }
+      },
+      '& .actionPost':{
+        textAlign: 'right',
+      },
   },
 }));
 

@@ -5,6 +5,8 @@ import PostsReducer from './PostsReducer'
 import PostReducer from './PostReducer'
 import AlbumsReducer from './AlbumsReducer'
 import AlbumReducer from './AlbumReducer'
+import PhotosReducer from './PhotosReducer';
+import CommentsReducer from './CommentsReducer';
 
 
 const rootReducer = combineReducers({
@@ -14,6 +16,8 @@ const rootReducer = combineReducers({
     post: PostReducer,
     album: AlbumReducer,
     albums: AlbumsReducer,
+    photos: PhotosReducer,
+    comments: CommentsReducer,
 });
 
 export default rootReducer;

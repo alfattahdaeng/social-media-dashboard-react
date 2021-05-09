@@ -12,8 +12,6 @@ import Box from '@material-ui/core/Box';
 
 import PostList from './PostList';
 import AlbumList from './AlbumList';
-import ListPostLayout from './layout/ListPostLayout';
-
 
 const useStyles = makeStyles (theme => ({
     root: {
@@ -78,7 +76,7 @@ const DetailTabs = props => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  
+
     return (
       <div className={classes.root}>
         <Tabs
@@ -96,14 +94,14 @@ const DetailTabs = props => {
           {props.posts.length !== 0 ? (
             <PostList posts={posts} />
           ) : (
-            <ListPostLayout />
+            <div>Loading Data</div>
           )}
         </TabPanel>
         <TabPanel value={value} index={1} className={classes.tabPanel}>
           {props.albums.length !== 0 ? (
             <AlbumList albums={albums} />
           ) : (
-            <ListPostLayout/>
+            <div>Loading Data</div>
           )}
         </TabPanel>
       </div>

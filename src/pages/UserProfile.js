@@ -7,6 +7,9 @@ import UserDetail from '../components/UserDetail';
 import DetailTabs from '../components/DetailTabs';
 
 import Container from '@material-ui/core/Container';
+import Button from '@material-ui/core/Button'
+
+import AddPostForm from '../components/AddPostForm';
 
 import { withStyles } from '@material-ui/core/styles'
 
@@ -14,10 +17,24 @@ const styles = theme => ({
     p:{
         padding: '50px 0',
     },
+    addPost:{
+      margin: '20px 0 0',
+      textAlign: 'right',
+    },
+    add: {
+      backgroundColor:'#04a4a4',
+      color: '#fff',
+      padding: '10px 25px',
+      '&:hover':{
+        backgroundColor: '#333',
+      }
+    }
 })
 
 class UserProfile extends React.Component {
-
+  state = {
+    showPostForm: false
+  };
   async componentDidMount() {
     // clear store state appropriately so the page does not render previous state.
     this.props.clearUser();
@@ -32,12 +49,25 @@ class UserProfile extends React.Component {
     this.props.fetchPosts(userId);
     this.props.fetchAlbums(userId);
   }
+
+  toggleNewPost = () => {
+    this.setState(prevState => ({
+      showPostForm: !prevState.showPostForm
+    }));
+  };
   render() {
     const { classes } = this.props;
 
     return (
       <Container maxWidth="md" className={classes.p}>
         <UserDetail />
+        <div className={classes.addPost}>
+            <Button onClick={this.toggleNewPost} className={classes.add}>
+              Add Post
+            </Button>
+        </div>
+        {this.state.showPostForm ? <AddPostForm /> : <div />}
+
         <DetailTabs />
       </Container>
     );
