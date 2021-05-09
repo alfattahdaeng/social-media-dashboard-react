@@ -14,8 +14,8 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Dashboard} />
         <Route exact path="/user/:userId" component={UserProfile} />
-        <Route exact path="/posts/:postId" component={PostDetailPage} />
-        <Route exact path="/albums/:albumId" component={AlbumDetail} />
+        <Route exact path="/user/:userId/posts/:postId" component={PostDetailPage} />
+        <Route exact path="/user/:userId/albums/:albumId" component={AlbumDetail} />
       </Switch>
     </div>
   );

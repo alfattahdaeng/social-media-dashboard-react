@@ -28,7 +28,7 @@ const Album = props => {
         <Link
           style={{textDecoration:'none'}}
           to={{
-            pathname: `/albums/${props.album.id}`,
+            pathname: `/user/${props.album.userId}/albums/${props.album.id}`,
             state: { id: props.album.id, userId: props.album.userId }
           }}
         >

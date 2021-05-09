@@ -69,7 +69,7 @@ class Post extends React.Component {
         <Link
          style={{textDecoration:'none'}}
          to={{
-            pathname: `/posts/${this.props.post.id}`,
+            pathname: `/user/${this.props.post.userId}/posts/${this.props.post.id}`,
             state: { id: this.props.post.id, userId: this.props.post.userId }
           }}
         >

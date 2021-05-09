@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchAlbum, clearAlbum, fetchUser, clearUser,
+import { fetchAlbum, clearAlbum, 
         fetchPhotos, clearPhotos } from '../actions';
 
 import PhotoList from '../components/PhotoList';
@@ -25,7 +25,6 @@ class AlbumDetail extends React.Component {
     // clear store state appropriately so the page does not render previous state.
     this.props.clearAlbum();
     this.props.clearPhotos();
-    this.props.clearUser();
 
     let albumId = this.props.location.state
       ? this.props.location.state.id
@@ -33,7 +32,6 @@ class AlbumDetail extends React.Component {
 
     this.props.fetchAlbum(albumId);
     this.props.fetchPhotos(albumId);
-    this.props.fetchUser(this.props.album.userId);
   }
 
   render() {
@@ -66,7 +64,6 @@ class AlbumDetail extends React.Component {
 const mapStateToProps = state => {
   return {
     album: state.album,
-    user: state.user,
     photos: state.photos
   };
 };
@@ -75,9 +72,6 @@ const mapDispatchToProps = dispatch => {
   return {
     fetchAlbum: albumId => {
       dispatch(fetchAlbum(albumId));
-    },
-    fetchUser: userId => {
-      dispatch(fetchUser(userId));
     },
     fetchPhotos: albumId => {
       dispatch(fetchPhotos(albumId));
@@ -88,9 +82,6 @@ const mapDispatchToProps = dispatch => {
     clearPhotos: () => {
       dispatch(clearPhotos());
     },
-    clearUser: () => {
-      dispatch(clearUser());
-    }
   };
 };
 

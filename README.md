@@ -21,11 +21,6 @@ Open your favorite console application (Terminal, Command Prompt etc.), navigate
  yarn start
 ```
 
-[Run with SSR : Port 8000]:
-```sh
- yarn run dev
-```
-
 ## About Project
 
 A social media dashboard using single page application with API

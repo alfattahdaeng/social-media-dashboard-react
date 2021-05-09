@@ -6,7 +6,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
 
@@ -48,7 +47,7 @@ function TabPanel(props) {
       >
         {value === index && (
           <Box p={3}>
-            <Typography>{children}</Typography>
+            <div>{children}</div>
           </Box>
         )}
       </div>
@@ -94,14 +93,14 @@ const DetailTabs = props => {
           {props.posts.length !== 0 ? (
             <PostList posts={posts} />
           ) : (
-            <div>Loading Data</div>
+            <span>Loading Data</span>
           )}
         </TabPanel>
         <TabPanel value={value} index={1} className={classes.tabPanel}>
           {props.albums.length !== 0 ? (
             <AlbumList albums={albums} />
           ) : (
-            <div>Loading Data</div>
+            <span>Loading Data</span>
           )}
         </TabPanel>
       </div>
